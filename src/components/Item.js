@@ -2,6 +2,7 @@ export default function Item({ item, handleTogglePacked, handleDeleteItem }) {
     return (
       <li style={{ textDecoration: item.packed ? "line-through" : "none" }}>
         ({item.quantity}) {item.description}
+        
         <input
           type="checkbox"
           checked={item.packed}

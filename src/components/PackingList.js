@@ -1,10 +1,11 @@
 import Item from "./Item";
 
 export default function PackingList({ items, handleTogglePacked, handleDeleteItem, handleDeleteAll }) {
+  const sortedItems = [...items].sort((a, b) => a.quantity - b.quantity);
     return (
       <div className="list">
         <ul>
-          {items.map((item) => (
+          {sortedItems.map((item) => (
             <Item
               key={item.id}
               item={item}
